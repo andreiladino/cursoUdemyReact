@@ -1,16 +1,22 @@
 import * as React from 'react'
 
-interface IIntroProps {
-    textss: string
+interface IJnvvvtroProps {
+    text?: string
 }
 
-export default class Intro extends React.Component<IIntroProps> {
+
+
+export default class Intro extends React.Component<IJnvvvtroProps> {
+    public state = {
+        textggg: 'Soy un tales'
+    }
     public render() {
-        const {textss} = this.props
+        const {text} = this.props
+        const t = text ? text : this.state.textggg
 
         return (
             <p className="App-intro">
-                <span>{textss}</span>
+                <span>{t}</span>
             </p>
         )
     }
